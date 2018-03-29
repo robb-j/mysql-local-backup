@@ -1,0 +1,24 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "Project setup by robb-j/node-base",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint web test",
+    "postversion": "node tools/buildAndPush.js latest",
+    "start": "node lib/cron.js"
+  },
+  "author": "robb-j",
+  "license": "ISC",
+  "dependencies": {
+    "node-cron": "^1.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
