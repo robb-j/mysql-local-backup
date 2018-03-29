@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint web test",
-    "postversion": "node tools/buildAndPush.js latest",
     "start": "node lib/cron.js"
   },
   "author": "robb-j",
