@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-CONTAINER_NAME=backup-test
+IMAGE_NAME=test-container
 MYSQL_CONTAINER=mysql
 
-docker build -t $CONTAINER_NAME .
+docker build -t $IMAGE_NAME .
 
 docker run -it --rm \
   -e SQL_HOST=$MYSQL_CONTAINER \
@@ -12,4 +12,4 @@ docker run -it --rm \
   -v "`pwd`/data:/data" \
   --link $MYSQL_CONTAINER \
   -p 8080:80 \
-  $CONTAINER_NAME ${1:cron}
+  $IMAGE_NAME ${1:cron}
